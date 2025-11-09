@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Blue Horizon - 香港浮式风电项目</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Inter 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Arial', 'sans-serif';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .hero-bg {
+            /* 建议：使用高质量浮式风机图片或视频 */
+            background-image: url('https://placehold.co/1920x1080/003366/FFFFFF?text=High-Quality+Visual+of+Floating+Turbines');
+            background-size: cover;
+            background-position: center;
+        }
+        /* 简单的卡片悬停动效 */
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* 用于平滑滚动时的导航栏偏移 */
+        section[id] {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 
+      导航栏 (Navbar)
+      严格按照 Part 1-4 的演示顺序
+    -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">
+                Deep Blue Horizon
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#part1" class="text-gray-600 hover:text-blue-600 font-medium">全局视野 (Part 1)</a>
+                <a href="#part2" class="text-gray-600 hover:text-blue-600 font-medium">战略对比 (Part 2)</a>
+                <a href="#part3" class="text-gray-600 hover:text-blue-600 font-medium">技术与原理 (Part 3)</a>
+                <a href="#part4" class="text-gray-600 hover:text-blue-600 font-medium">香港案例 (Part 4)</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 font-medium transition duration-300">联系我们</a>
+            </div>
+            <!-- 移动端菜单按钮 (简化) -->
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 
+          开场: Homepage Vision (演示开始)
+          由组员1开始介绍，作为整个演示的引言。
+        -->
+        <section id="home" class="hero-bg text-white min-h-[70vh] flex items-center">
+            <div class="container mx-auto px-6 py-24 text-center bg-black bg-opacity-40 rounded-lg">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">解锁深蓝</h1>
+                <h2 class="text-2xl md:text-3xl font-light mb-8">开创香港浮式风电，赋能大湾区能源未来</h2>
+                <p class="max-w-3xl mx-auto text-lg mb-10">
+                    我们的使命：交付香港首个具备银行融资可行性的战略性浮式风电项目，以此为跳板，为香港解锁广阔南海的千兆瓦级清洁能源市场。
+                </p>
+                <a href="#part1" class="bg-white text-blue-800 px-8 py-3 rounded-md font-bold text-lg hover:bg-gray-100 transition duration-300">
+                    了解项目详情
+                </a>
+            </div>
+        </section>
+        
+
+            <!-- 
+                  团队介绍 (Company Background) - [v5 最终修改]
+                  在v4基础上，为每个卡片增加了组员名字
+                -->
+                <div class="bg-gray-100 p-12 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-center mb-8">关于我们 (Company Background)</h3>
+                    <p class="text-center max-w-3xl mx-auto text-gray-700 mb-10">
+                        我们是一个跨学科的项目团队，致力于交付香港首个战略性浮式风电项目。我们的专业能力融合了前沿的市场分析、深度的系统工程、严谨的科学原理和清晰的商业战略，旨在为大湾区的能源转型提供一个安全、可靠且具备高投资价值的解决方案。
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <!-- 修改点 1.1 -->
+                            <p class="text-sm font-bold text-gray-900 mb-2">组员 1: [在此输入名字]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 1: 市场分析</h4>
+                            <p class="text-gray-600 text-sm">全局市场机遇与政策研究</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <!-- 修改点 1.2 -->
+                            <p class="text-sm font-bold text-gray-900 mb-2">组员 2: [在此输入名字]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 2: 战略定位</h4>
+                            <p class="text-gray-600 text-sm">技术路线对比与风资源分析</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <!-- 修改点 1.3 -->
+                            <p class="text-sm font-bold text-gray-900 mb-2">组员 3: [在此输入名字]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 3: 技术工程</h4>
+                            <p class="text-gray-600 text-sm">技术方案、科学原理论证与创新</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <!-- 修改点 1.4 -->
+                            <p class="text-sm font-bold text-gray-900 mb-2">组员 4: [在此输入名字]</p>
+                            <h4 class="text-lg font-semibold text-blue-700">✔ Part 4: 商业战略</h4>
+                            <p class="text-gray-600 text-sm">香港案例论证与投资回报分析</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 
+          板块 1: 全局视野 (Part 1)
+          演示者：组员 1
+          内容：市场机遇 (图表) + 公司背景 (团队)
+        -->
+        <section id="part1" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 1: 全局视野 (The Opportunity)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">我们为什么现在行动：一个即将爆发的全球市场。</p>
+
+                <!-- 市场图表 (Visuals) -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold text-center mb-8">市场正处于爆发前夜</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 视觉 1: 市场增长 -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-center">全球年新增装机容量预测</h4>
+                            <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+                                <!-- <img src="[您的图表链接]" alt="全球市场增长预测图" class="object-contain h-full w-full"> -->
+                                <p class="text-gray-500">[视觉区域: 市场增长预测柱状图 (GWEC, 2021)]</p>
+                            </div>
+                            <p class="mt-4 text-center text-gray-700">权威机构(GWEC)预测，全球市场将在2025年后**加速增长**，2030年年新增容量将达 **39.98 GW**。</p>
+                        </div>
+                        <!-- 视觉 2: 成本下降 -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-center">LCOE 成本已获验证</h4>
+                            <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+                                <!-- <img src="[您的图表链接]" alt="LCOE成本下降曲线" class="object-contain h-full w-full"> -->
+                                <p class="text-gray-500">[视觉区域: LCOE下降趋势折线图]</p>
+                            </div>
+                            <p class="mt-4 text-center text-gray-700">技术已成熟：成本已从早期样机的 **30万元/千瓦** 降至商业项目的 **4万元/千瓦** (漂浮式海上风电, 2023)。</p>
+                        </div>
+                    </div>
+                </div>
+
+
+        <!-- 
+          板块 2: 战略对比 (Part 2)
+          演示者：组员 2
+          内容：战略对比 (表格) + 深入分析 (新增Visuals)
+        -->
+        <section id="part2" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 2: 战略对比 (The Strategy)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">为什么浮动式是香港唯一的长期选择。</p>
+
+                <!-- 2.1: 对比表格 (Form/Table) -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold text-center mb-8">浮动式 vs. 固定式：全方位对比</h3>
+                    <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                        <table class="min-w-full text-left">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="p-4 font-semibold">特性</th>
+                                    <th class="p-4 font-semibold">固定式基础 (传统方案)</th>
+                                    <th class="p-4 font-semibold text-blue-600">浮动式基础 (我们的方案)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">适用海域</td>
+                                    <td class="p-4 text-gray-700">仅限浅水区 (< 60m)</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">解锁深远海 (> 60m)</span> - 覆盖全球80%的风资源</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">环境影响</td>
+                                    <td class="p-4 text-gray-700"><span class="text-red-600 font-bold">高:</span> 需高噪音海底打桩，破坏海床</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">低:</span> 无需打桩，对海洋生物友好</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">发电效率</td>
+                                    <td class="p-4 text-gray-700">受近岸风况限制 (~45% 容量因子)</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">更高:</span> 可获取更强、更稳定的远海洋流 (如 Hywind 项目容量因子 >57%²)</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">本地产业</td>
+                                    <td class="p-4 text-gray-700">依赖大型专用海上安装船</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">激活本地产业:</span> 码头总装，利用香港成熟的造船和建筑业能力</td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 font-medium">技术瓶颈</td>
+                                    <td class="p-4 text-gray-700">XXL单桩的D/t比率导致成本呈指数级增长 (重量超2000吨)³</td>
+                                    <td class="p-4 text-gray-700"><span class="font-bold text-green-600">模块化，易于规模化生产</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 text-right">
+                        引用: 2. Equinor (Hywind Scotland data); 3. BOSLAN (2022)
+                    </p>
+                </div>
+
+                <!-- 
+                  深入分析 - [v4 新增改进]
+                  增加了组员2要求的额外Visuals
+                -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-semibold text-center mb-12">深入分析：为何浮动式是更优的资产</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- 视觉 1: OpenFAST -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">动态稳定性 (Dynamic Stability)</h4>
+                            <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉区域: 动态响应仿真图 (OpenFAST)]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">数据:</span> 先进的仿真工具 (如 OpenFAST, 引用自 Kim et al., 2023) 证实，浮动式平台在风浪中能保持稳定运动，实现更平滑的功率输出和更高的容量因子。
+                            </p>
+                        </div>
+                        <!-- 视觉 2: LCA / 碳足迹 -->
+                        <div class="bg-white p-6 rounded-lg shadow-lg feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">更低的环境成本(Lower Environmental Cost)</h4>
+                            <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉区域: 全生命周期碳足迹对比图]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">数据:</span> LCA (生命周期) 分析 (Yuan et al., 2023) 表明，浮动式风电的碳足迹仅为 **25.76g CO2/kWh**，远低于其他能源。
+                            </p>
+                             <ul class="list-disc list-inside space-y-1 text-gray-600 mt-2 text-sm">
+                                <li>无海底打桩作业，对海洋生态系统零干扰。</li>
+                                <li>退役时可完全移除，实现海床恢复。</li>
+                            </ul>
+                           </div>
+                                <!-- *** v5 新增改进点 (来自 world bank document.pdf) *** -->
+                                <div class="p-3 bg-blue-100 border-l-4 border-blue-500 rounded-r-lg">
+                                    <p class="font-semibold text-blue-800">✔ 战略选址优势 (Strategic Siting)</p>
+                                    <p class="text-gray-700 text-sm">世界银行 (2024) 最新指南强调：浮动式能进入深海，从**源头规避**近海的航道、渔业和生态核心区，极大降低项目审批风险。</p>
+                                </div>
+                                <!-- *** 改进结束 *** -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 
+          板块 3: 技术与原理 (Part 3)
+          演示者：组员 3
+          内容：核心技术 (Normal) + 核心原理 (Theory) + 先进技术 (Advanced)
+        -->
+        <section id="part3" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 3: 技术方案与核心原理 (The Solution)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">我们如何构建一个更安全、更智能、更经济的系统。</p>
+
+                <!-- 3.1: 核心技术 (Normal Technology) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                    <!-- 视觉元素 -->
+                    <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                        <!-- <img src="[您的图表链接]" alt="混凝土半潜式平台 3D 渲染图" class="object-cover h-96 w-full rounded-lg"> -->
+                        <p class="text-gray-500">[视觉区域: 混凝土半潜式平台 3D 渲染图]</p>
+                    </div>
+                    <!-- 要点 -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-blue-700">核心技术 (Normal Technology)</h3>
+                        <p class="text-lg text-gray-700">
+                            我们选择行业验证最充分的**混凝土半潜式平台**，专为香港的独特环境（台风、本地产业）而优化。
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12 12 0 003 15c0 5.523 4.477 10 10 10s10-4.477 10-10c0-4.53-2.99-8.358-7.03-9.697z"></path></svg>
+                                <div><span class="font-semibold">卓越的稳定性:</span> 经验证的成熟设计，能有效抵御南海的复杂海况。</div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                <div><span class="font-semibold">激活本地产业:</span> 混凝土结构完美契合香港世界一流的土木建筑能力，最大化本地价值。</div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM3 17H1m18 0h-2M3 12l2 3h14l2-3M5 15h14M9 6l1 3h4l1-3M10 3h4"></path></svg>
+                                <div><span class="font-semibold">低风险安装:</span> 在码头完成风机总装和调试，整体拖航至机位，极大减少昂贵且高风险的海上作业。</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3.2: 核心原理 (The Theory) -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-semibold text-center mb-12">核心原理 (The Theory)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- 原理 1: 水动力学 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">1. 水动力学原理</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉: 平台类型与稳定原理图]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">理论:</span> 与Spar（压载稳定）或TLP（系泊稳定）不同，我们的**半潜式**平台依靠宽阔的浮筒提供巨大的**水线面稳定性**，使其成为台风多发海域的理想选择。
+                            </D>
+                        </div>
+                        <!-- 原理 2: 结构动力学 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">2. 结构动力学原理</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉: 台风下系泊缆绳张力图]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">理论:</span> 平台在台风等极端海况下，会承受巨大的**动态结构载荷**。系泊系统必须被设计为能够吸收这些能量，以防止灾难性失效，这是确保生存的关键。
+                            </p>
+                        </div>
+                        <!-- 原理 3: 气动-水动耦合 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">3. 气动-水动耦合原理</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉: 负阻尼现象或耦合方程图]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">理论:</span> 浮式平台独有的挑战：平台运动与风机气动载荷相互作用，会产生“**负空气动力学阻尼**”现象 (Li et al., 2025)，可能导致系统失稳。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3.3: 先进技术 (Advanced Technology) - 对应 Theory -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-center mb-12">先进技术创新 (Advanced Technology)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- 创新点 1 (对应 Theory 1) -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-lg transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">1. 绿色氢能一体化</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉: 风电制氢信息图]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">应用:</span> 基于 **(Theory 1) 卓越的水动力稳定性**，我们的平台是承载未来海上制氢模块的理想选择，为项目拓展了新的收入流。
+                            </p>
+                        </div>
+                        <!-- 创新点 2 (对应 Theory 2) -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-lg transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">2. 先进合成缆绳系泊</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉: 锚链 vs 合成缆绳载荷对比图]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">应用:</span> 为解决 **(Theory 2) 极端的结构载荷**，我们使用合成缆绳。文献 (Pillai et al., 2022) 证实：峰值锚固载荷**降低84%**，大幅降低成本并提升疲劳寿命。
+                            </p>
+                        </div>
+                        <!-- 创新点 3 (对应 Theory 3) -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-lg transition duration-300 feature-card">
+                            <h4 class="text-xl font-bold text-blue-700 mb-3">3. 智能耦合控制</h4>
+                            <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+                                <p class="text-gray-500">[视觉: 台风中平台稳定图 (Zhang et al., 2024)]</p>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-bold">应用:</span> 为攻克 **(Theory 3) “负阻尼”问题**，我们的先进控制系统确保了绝对稳定——(Zhang et al., 2024) 证实，即使在台风中发生系泊断裂，平台依然安全。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          板块 4: 香港案例 (Part 4 / Target)
+          演示者：组员 4
+          内容：香港项目概览 + 战略价值 (投资机遇)
+        -->
+        <section id="part4" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Part 4: 香港案例 (The Target)</h2>
+                <p class="text-xl text-center text-gray-600 mb-16">为何香港是完美的起点和枢纽。</p>
+                
+                <!-- 4.1: 香港项目概览 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                        <!-- <img src="[您的图表链接]" alt="香港东南水域项目选址地图" class="object-cover h-96 w-full rounded-lg"> -->
+                        <p class="text-gray-500">[视觉区域: 香港东南水域项目选址地图]</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6">香港东南水域 255MW 示范项目</h3>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <!-- "Form" (表格) -->
+                            <table class="min-w-full">
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr>
+                                        <td class="p-4 font-medium text-gray-600">项目容量</td>
+                                        <td class="p-4 font-semibold text-gray-900">255 MW</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-medium text-gray-600">位置</td>
+                                        <td class="p-4 font-semibold text-gray-900">香港东南水域 (水深 < 30m)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-medium text-gray-600">技术方案</td>
+                                        <td class="p-4 font-semibold text-gray-900">混凝土半潜式平台 (浮动式)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-medium text-gray-600">年发电量</td>
+                                        <td class="p-4 font-semibold text-gray-900">足以为 80,000 户家庭供电¹</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-medium text-gray-600">减排效益</td>
+                                        <td class="p-4 font-semibold text-gray-900">每年减少约 380,000 吨 CO₂¹</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 text-right">
+                            引用: 1. 基于 Ramboll & CLP (2009) 环评报告数据估算。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4.2: 战略价值 (Investment Case) -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-8">投资案例：“战略跳板”</h3>
+                    <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center mb-8">
+                        <!-- <img src="[您的图表链接]" alt="战略跳板概念图" class="object-contain h-96 w-full rounded-lg"> -->
+                        <p class="text-gray-500">[视觉区域: "战略跳板"概念图 - 香港 -> 南海]</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md stat-card border-none">
+                            <div class="text-5xl font-bold text-blue-600 mb-3">1,582 GW</div>
+                            <h4 class="text-xl font-semibold mb-2">远期潜力 (The Prize)</h4>
+                            <p class="text-gray-700">世界银行测算的中国南海浮式风电总潜力，一个万亿级的蓝海市场。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md stat-card border-none">
+                            <div class="text-5xl font-bold text-blue-600 mb-3">>22 GW</div>
+                            <h4 class="text-xl font-semibold mb-2">近期市场 (The Market)</h4>
+                            <p class="text-gray-700">邻近的广东和福建省已规划的近期海上风电项目 (46.7GW...pdf)，市场已启动。</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md stat-card border-none">
+                            <div class="text-5xl font-bold text-blue-600 mb-3">已验证</div>
+                            <h4 class="text-xl font-semibold mb-2">技术可行 (The Proof)</h4>
+                            <p class="text-gray-700">"海油观澜号"已在南海成功投运 (国内海上浮式...pdf)，证明半潜式技术已适应本地海况。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          板块 5: 联系我们 (Contact)
+          演示者：组员 4 (作为总结)
+        -->
+        <section id="contact" class="py-20 bg-blue-800 text-white">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-3xl font-bold mb-6">联系我们 (Contact)</h2>
+                <p class="text-lg text-blue-100 mb-10">
+                    我们正在寻找具有远见的投资者、政府及行业伙伴，共同将这一战略构想变为现实。请联系我们获取详细的项目章程和投资回报分析。
+                </p>
+                
+                <!-- "Form" (联系表单) -->
+                <form class="bg-white text-gray-800 p-8 rounded-lg shadow-xl max-w-xl mx-auto text-left">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="您的姓名">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">电子邮箱</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="您的邮箱">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">信息</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="您感兴趣的内容..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white px-10 py-3 rounded-md font-bold text-lg hover:bg-blue-700 transition duration-300 w-full md:w-auto">
+                            发送垂询
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Deep Blue Horizon Project Team. All rights reserved.</p>
+            <p class="text-sm mt-2">一个为香港能源未来而设的战略构想。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
